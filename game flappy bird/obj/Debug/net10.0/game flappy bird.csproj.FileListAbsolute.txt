@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\bin\Debug\net10.0\game flappy bird.exe
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\bin\Debug\net10.0\game flappy bird.deps.json
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\bin\Debug\net10.0\game flappy bird.runtimeconfig.json
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\bin\Debug\net10.0\game flappy bird.dll
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\bin\Debug\net10.0\game flappy bird.pdb
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.AssemblyInfo.cs
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.dll
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\refint\game flappy bird.dll
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.pdb
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.genruntimeconfig.cache
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\ref\game flappy bird.dll

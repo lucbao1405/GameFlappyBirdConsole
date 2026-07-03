@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|c:\\users\\admin\\source\\repos\\game flappy bird\\game flappy bird\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|solutionrelative:game flappy bird\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|c:\\users\\admin\\source\\repos\\game flappy bird\\game flappy bird\\pipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|solutionrelative:game flappy bird\\pipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|c:\\users\\admin\\source\\repos\\game flappy bird\\game flappy bird\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|solutionrelative:game flappy bird\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|c:\\users\\admin\\source\\repos\\game flappy bird\\game flappy bird\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|solutionrelative:game flappy bird\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|c:\\users\\admin\\source\\repos\\game flappy bird\\game flappy bird\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6801750B-03B2-2224-3ECC-4E2EC8AF325D}|game flappy bird\\game flappy bird.csproj|solutionrelative:game flappy bird\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\GameManager.cs",
+              "RelativeDocumentMoniker": "game flappy bird\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\GameManager.cs",
+              "RelativeToolTip": "game flappy bird\\GameManager.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T13:20:22.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pipe.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\Pipe.cs",
+              "RelativeDocumentMoniker": "game flappy bird\\Pipe.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\Pipe.cs",
+              "RelativeToolTip": "game flappy bird\\Pipe.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T13:20:11.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bird.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\Bird.cs",
+              "RelativeDocumentMoniker": "game flappy bird\\Bird.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\Bird.cs",
+              "RelativeToolTip": "game flappy bird\\Bird.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T13:19:58.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\Entity.cs",
+              "RelativeDocumentMoniker": "game flappy bird\\Entity.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\Entity.cs",
+              "RelativeToolTip": "game flappy bird\\Entity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T13:19:44.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\Program.cs",
+              "RelativeDocumentMoniker": "game flappy bird\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\game flappy bird\\game flappy bird\\Program.cs",
+              "RelativeToolTip": "game flappy bird\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T07:29:13.641Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
