@@ -12,3 +12,4 @@ C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\
 C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.pdb
 C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.genruntimeconfig.cache
 C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\ref\game flappy bird.dll
+C:\Users\Admin\source\repos\game flappy bird\game flappy bird\obj\Debug\net10.0\game flappy bird.sourcelink.json

@@ -4,11 +4,12 @@ using System.Text;
 
 namespace game_flappy_bird
 {
-    public class Bird : Entity
+    public class Bird
     {
-        public Bird(int x, int y) { X = x; Y = y; Icon = 'O'; }
-        public override void Draw() { Console.SetCursorPosition(X, Y); Console.Write(Icon); }
-        public override void Move() { Y++; } // Rơi tự do
+        public int X { get; set; } = 5; 
+        public int Y { get; set; } = 10;
+        public void Move() { Y++; }
         public void Jump() { Y -= 2; }
+        public void Draw() { Console.SetCursorPosition(X, Y); Console.Write(">|>"); }
     }
 }

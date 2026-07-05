@@ -10,8 +10,7 @@ namespace game_flappy_bird
         {
             Console.CursorVisible = false;
             Console.SetWindowSize(60, 20);
-            GameManager game = new GameManager();
-            game.Run();
+            new GameManager().Run();
         }
     }
 }

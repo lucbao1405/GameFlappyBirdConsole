@@ -6,45 +6,44 @@ namespace game_flappy_bird
 {
     public class GameManager
     {
-        private Bird bird = new Bird(5, 10);
-        private List<Pipe> pipes = new List<Pipe>();
-        private Random rnd = new Random();
+        private Bird bird = new Bird();
+        private PipeManager pipeManager = new PipeManager();
         private bool isGameOver = false;
+        private int score = 0; // Thêm biến điểm
 
         public void Run()
         {
+            // 1. Màn hình bắt đầu
+            Console.Clear();
+            Console.WriteLine("NHAN PHIM SPACE DE BAT DAU");
+            while (Console.ReadKey(true).Key != ConsoleKey.Spacebar) { }
+
+            // 2. Vòng lặp chính
             while (!isGameOver)
             {
-                if (Console.KeyAvailable) { var k = Console.ReadKey(true).Key; if (k == ConsoleKey.Spacebar) bird.Jump(); }
+                if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Spacebar) bird.Jump();
 
                 bird.Move();
-                UpdatePipes();
-                CheckCollision();
+                pipeManager.UpdatePipes();
+
+                // Tính điểm: cộng điểm mỗi khi vượt qua cột (dựa trên X)
+                score = pipeManager.GetScore();
+
+                if (bird.Y <= 0 || bird.Y >= 19 || pipeManager.CheckCollision(bird)) isGameOver = true;
 
                 Console.Clear();
                 bird.Draw();
-                foreach (var p in pipes) p.Draw();
+                pipeManager.DrawPipes();
+                Console.SetCursorPosition(0, 0);
+                Console.Write("SCORE: " + score); // Hiển thị điểm
 
                 Thread.Sleep(80);
             }
+
+            // 3. Màn hình kết thúc
             Console.Clear();
-            Console.WriteLine("GAME OVER!");
-        }
-
-        private void UpdatePipes()
-        {
-            if (pipes.Count == 0 || pipes[pipes.Count - 1].X < 30)
-                pipes.Add(new Pipe(59, rnd.Next(2, 12)));
-
-            foreach (var p in pipes) p.Move();
-            if (pipes.Count > 0 && pipes[0].X < 0) pipes.RemoveAt(0);
-        }
-
-        private void CheckCollision()
-        {
-            if (bird.Y <= 0 || bird.Y >= 19) isGameOver = true;
-            foreach (var p in pipes)
-                if (bird.X == p.X && (bird.Y < p.GapY || bird.Y > p.GapY + p.GapSize)) isGameOver = true;
+            Console.WriteLine("GAME OVER! DIEM CUA BAN: " + score);
         }
     }
 }
+
