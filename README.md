@@ -9,6 +9,10 @@ Pipe.cs: Định nghĩa hình dáng và tọa độ cột.
 
 PipeManager.cs: Quản lý danh sách cột, va chạm và tính điểm.
 
-GameManager.cs: "Bộ não" điều khiển vòng lặp game và trạng thái màn hình.
+GameManager.cs:Điều khiển vòng lặp game và trạng thái màn hình.
 
 Program.cs: Điểm bắt đầu (Entry point) của ứng dụng.
+
+ICollidable.cs: lập trình va chạm
+
+Clone dự án và dùng Visual Studio để sử dụng
