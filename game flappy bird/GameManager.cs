@@ -9,16 +9,16 @@ namespace game_flappy_bird
         private Bird bird = new Bird();
         private PipeManager pipeManager = new PipeManager();
         private bool isGameOver = false;
-        private int score = 0; // Thêm biến điểm
+        private int score = 0;
 
         public void Run()
         {
-            // 1. Màn hình bắt đầu
+            //Màn hình bắt đầu
             Console.Clear();
             Console.WriteLine("NHAN PHIM SPACE DE BAT DAU");
             while (Console.ReadKey(true).Key != ConsoleKey.Spacebar) { }
 
-            // 2. Vòng lặp chính
+            //Vòng lặp chính
             while (!isGameOver)
             {
                 if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Spacebar) bird.Jump();
@@ -26,7 +26,7 @@ namespace game_flappy_bird
                 bird.Move();
                 pipeManager.UpdatePipes();
 
-                // Tính điểm: cộng điểm mỗi khi vượt qua cột (dựa trên X)
+                //Tính điểm: cộng điểm mỗi khi vượt qua cột (dựa trên X)
                 score = pipeManager.GetScore();
 
                 if (bird.Y <= 0 || bird.Y >= 19 || pipeManager.CheckCollision(bird)) isGameOver = true;
@@ -35,12 +35,12 @@ namespace game_flappy_bird
                 bird.Draw();
                 pipeManager.DrawPipes();
                 Console.SetCursorPosition(0, 0);
-                Console.Write("SCORE: " + score); // Hiển thị điểm
+                Console.Write("SCORE: " + score);
 
                 Thread.Sleep(80);
             }
 
-            // 3. Màn hình kết thúc
+            //Màn hình kết thúc
             Console.Clear();
             Console.WriteLine("GAME OVER! DIEM CUA BAN: " + score);
         }

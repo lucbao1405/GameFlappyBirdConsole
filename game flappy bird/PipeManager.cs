@@ -9,7 +9,7 @@ namespace game_flappy_bird
     {
         private List<Pipe> pipes = new List<Pipe>();
         private Random rnd = new Random();
-        private int score = 0; // Biến đếm điểm thực tế
+        private int score = 0;
 
         public void UpdatePipes()
         {
@@ -33,10 +33,13 @@ namespace game_flappy_bird
         public bool CheckCollision(Bird bird)
         {
             foreach (var p in pipes)
-                if (bird.X == p.X && (bird.Y < p.GapY || bird.Y > p.GapY + p.GapSize)) return true;
+            {
+                if (p.IsCollidingWith(bird.X, bird.Y))
+                    return true;
+            }
             return false;
         }
-        
+
     }
 }
 
