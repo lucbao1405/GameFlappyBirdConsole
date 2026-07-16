@@ -1,0 +1,28 @@
+﻿/*
+ TODO (Bird.cs): implement the Bird player class
+
+ Responsibilities:
+ - Track position (X, Y) and vertical velocity (float velocityY).
+ - Physics: apply gravity each update and clamp to screen bounds.
+ - Jump(): set velocityY = -jumpStrength when player presses jump key.
+ - Update(float dt): integrate velocity -> position and handle collisions with ceiling/floor.
+ - Draw(): draw the bird sprite at its current X,Y. Always check bounds before SetCursorPosition.
+ - Reset(): put bird back to starting position and zero velocity.
+
+ Public members to add (suggested):
+ - public int X { get; set; }
+ - public int Y { get; set; }
+ - private float velocityY;
+ - private const float Gravity = 30f; // tweak for feel
+ - private const float JumpStrength = 10f; // tweak for feel
+
+ Notes:
+ - Use integer positions for drawing but keep velocity as float for smooth physics.
+ - Keep Draw() lightweight to avoid flicker; consider drawing to a buffer.
+*/
+namespace game_flappy_bird
+{
+    internal class Entity
+    {
+    }
+}

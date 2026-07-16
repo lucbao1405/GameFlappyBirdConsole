@@ -1,0 +1,6 @@
+﻿namespace game_flappy_bird
+{
+    internal class Entity
+    {
+    }
+}

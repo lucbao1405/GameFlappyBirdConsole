@@ -1,0 +1,106 @@
+﻿using System;
+
+namespace game_flappy_bird
+{
+    public class GameManager
+    {
+        private Bird _bird;
+        private List<Pipe> _pipes;
+        private bool _isRunning = true;
+        private int _score = 0;
+        public static float gameSpeed = 10;
+
+        public void Start()
+        {
+            Console.Clear();
+            Console.CursorVisible = false;
+            _bird = new Bird(5, 10);
+            _pipes = new List<Pipe>();
+            float lastTime = Environment.TickCount;
+
+            while (_isRunning)
+            {
+                float currentTime = Environment.TickCount;
+                float dt = (currentTime - lastTime) / 1000f;
+                lastTime = currentTime;
+
+                //làm sạch khung hình cũ
+                _bird.Clear();
+                foreach (var p in _pipes) p.Clear();
+
+                //gọi phương thức nhảy
+                if (Console.KeyAvailable)
+                {
+                    if (Console.ReadKey(true).Key == ConsoleKey.Spacebar) _bird.Jump();
+                }
+
+                _bird.Update(dt);
+                foreach (var pipe in _pipes)
+                {
+                    pipe.Update(dt);
+                    if (CheckCollision(_bird, pipe)) _isRunning = false;
+                    if (!pipe.Passed && pipe.X < _bird.X)
+                    {
+                        _score++;
+                        pipe.Passed = true;
+                        DrawScore(_score);
+                    }
+                }
+
+                // Xử lý danh sách
+                _pipes.RemoveAll(p => !p.IsActive);
+                if (_pipes.Count == 0 || _pipes[_pipes.Count - 1].X < 40)
+                    _pipes.Add(new Pipe(Console.WindowWidth - 1));
+
+                if (!_bird.IsActive) _isRunning = false;
+
+                //vẽ chim
+                _bird.Draw();
+                foreach (var p in _pipes) p.Draw();
+                Thread.Sleep(16);
+
+                if (!_isRunning)
+                {
+                    int centerX = Console.WindowWidth / 2 - 5;
+                    int centerY = Console.WindowHeight / 2;
+
+                    Console.SetCursorPosition(centerX, centerY);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write(" GAME OVER ");
+
+                    Console.SetCursorPosition(centerX, centerY + 1);
+                    Console.Write($" Diem: {_score} ");
+                    Console.ResetColor();
+
+                    Console.SetCursorPosition(0, Console.WindowHeight - 1);
+                    Console.Write("Nhan phim bat ky de thoat...");
+                    Console.ReadKey(true);
+                    return;
+                }
+            }
+        }
+        private void DrawScore(int score)
+        {
+            Console.SetCursorPosition(2, 1);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write($"SCORE: {score}");
+            Console.ResetColor();
+        }
+        private bool CheckCollision(Bird bird, Pipe pipe)
+        {
+            // Kiểm tra va chạm cơ bản
+            Rectangle bRect = bird.GetBounds();
+            Rectangle pRect = pipe.GetBounds();
+
+            if (bRect.IntersectsWith(pRect))
+            {
+                if (bird.Y >= pipe.Y && bird.Y + 1 <= pipe.Y + pipe.GapSize)
+                {
+                    return false;
+                }
+                return true;
+            }
+            return false;
+        }
+    }
+}

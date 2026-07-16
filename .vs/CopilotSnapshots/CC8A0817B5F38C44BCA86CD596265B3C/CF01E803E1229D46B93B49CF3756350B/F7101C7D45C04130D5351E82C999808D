@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace game_flappy_bird
+{
+    public abstract class Entity
+    {
+        // TODO: Base game entity
+        // - Add shared properties used by game objects, for example:
+        //     public int X { get; set; }
+        //     public int Y { get; set; }
+        // - Add lifecycle methods so derived classes implement behavior:
+        //     public virtual void Update(float dt) { }
+        //     public abstract void Draw();
+        // - Keep this class simple; use interfaces (e.g., ICollidable) for optional capabilities.
+        // Implement these members when you create Bird, Pipe, and other entities.
+    }
+}

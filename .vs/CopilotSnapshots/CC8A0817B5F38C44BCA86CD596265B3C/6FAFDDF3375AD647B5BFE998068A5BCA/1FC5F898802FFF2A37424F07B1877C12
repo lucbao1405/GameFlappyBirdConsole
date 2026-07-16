@@ -1,0 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace game_flappy_bird
+{
+    public abstract class Entity
+    {
+        
+    }
+}

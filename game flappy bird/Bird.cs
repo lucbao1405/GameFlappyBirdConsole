@@ -1,20 +1,61 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace game_flappy_bird
+﻿namespace game_flappy_bird
 {
-    public class Bird : Entity
+    public class Bird : Entity, IDrawable, IUpdatable, ICollidable
     {
-        public Bird() { X = 5; Y = 10; }
+        float _gravity = 15;
+        float _velocity = 0;
+        float JumpPW = 8;
+        private float _yReal;
+        private int _OldY;
 
-        public void Move() { Y++; }
-        public void Jump() { Y -= 2; }
+        public Bird(int x, int y) : base(x, y)
+        {
+            _OldY = Y;
+            _yReal =(float) y;
+            this.Width = 3;
+            this.Height = 1;
+        }
+        public override void Update(float dt)
+        {
+            _OldY = Y;
+            _velocity += _gravity * dt;
+            _yReal += _velocity * dt;
+            Y = (int)Math.Round(_yReal);
+
+            if (Y >= Console.WindowHeight) { Y = Console.WindowHeight - 1; IsActive = false; }
+
+            if (Y >= Console.WindowHeight - 1)
+            {
+                Y = Console.WindowHeight - 1;
+                IsActive = false;
+            }
+        }
+        public void Jump()
+        {
+            _velocity = -JumpPW;
+        }
 
         public override void Draw()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(X, Y);
-            Console.Write(">|>");
+            Console.Write(">0>");
+            Console.ResetColor();
+        }
+        public override void Clear()
+        {
+            for (int y = _OldY - 1; y <= _OldY + 1; y++)
+            {
+                if (y >= 0 && y < Console.WindowHeight)
+                {
+                    Console.SetCursorPosition(X, y);
+                    Console.Write("    ");
+                }
+            }
+        }
+        public MyRectangle GetBounds()
+        {
+            return new MyRectangle(X, Y, Width, Height);
         }
     }
 }

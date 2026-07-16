@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace game_flappy_bird
+{
+    public class Pipe : ICollidable
+    {
+        public int X { get; set; }
+        public int GapY { get; set; }
+        public int GapSize { get; set; } = 5;
+
+        public void Draw()
+        {
+            Console.SetCursorPosition(X, GapY);
+            Console.Write("||");
+            Console.SetCursorPosition(X, GapY + GapSize);
+            Console.Write("||");
+        }
+        public void Move()
+        {
+            X--;
+        }
+        public Pipe(int x, int gapY)
+        {
+            X = x;
+            GapY = gapY;
+        }
+        public bool IsCollidingWith(int birdX, int birdY)
+        {
+   
+            if (birdX == this.X)
+            {
+                if (birdY < GapY || birdY > GapY + GapSize)
+                    return true;
+            }
+            return false;
+        }
+    }
+}
+   

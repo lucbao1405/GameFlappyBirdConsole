@@ -1,0 +1,21 @@
+﻿/*
+ TODO (Pipe.cs): implement pipe obstacles
+
+ Responsibilities:
+ - Track horizontal position X, gap position GapY and GapSize.
+ - Draw(): render pipe column(s) from top to gap and from gap+GapSize to bottom.
+ - Move(): shift X left each update.
+ - IsCollidingWith(int birdX, int birdY): return true when bird overlaps pipe columns and is outside the gap.
+ - Provide helper IsOffScreen() to signal when pipe can be removed (X + width < 0).
+
+ Notes and tips:
+ - Keep pipe width consistent with draw (e.g., 2 characters "||"). Collision should check both X and X+1.
+ - When spawning pipes, randomize GapY within safe margins: e.g., Random.Next(3, Console.WindowHeight - GapSize - 3).
+ - Avoid SetCursorPosition outside console bounds by checking Console.WindowWidth/Height.
+*/
+namespace game_flappy_bird
+{
+    internal class Entity
+    {
+    }
+}

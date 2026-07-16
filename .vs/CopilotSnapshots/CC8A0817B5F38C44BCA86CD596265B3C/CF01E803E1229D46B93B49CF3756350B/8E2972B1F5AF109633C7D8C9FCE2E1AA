@@ -1,0 +1,20 @@
+﻿/*
+ TODO (Program.cs): program entrypoint and console setup
+
+ Responsibilities:
+ - Configure console for gameplay: set window/buffer size (if desired), hide cursor via Console.CursorVisible = false.
+ - Create GameManager instance and call its Run()/Start() method.
+ - Handle Ctrl+C or Escape to exit cleanly and restore console state if needed.
+
+ Minimal flow:
+ - static void Main(): Console.CursorVisible = false; var gm = new GameManager(); gm.Run();
+
+ Note:
+ - Avoid setting window size in a way that throws exceptions on some terminals; validate sizes.
+*/
+namespace game_flappy_bird
+{
+    internal class Entity
+    {
+    }
+}

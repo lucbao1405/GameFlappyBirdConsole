@@ -1,58 +1,63 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace game_flappy_bird
+﻿namespace game_flappy_bird
 {
-    public class Pipe : ICollidable
+    public class Pipe : Entity, IUpdatable, ICollidable
     {
-        public int X { get; set; }
-        public int GapY { get; set; }
-        public int GapSize { get; set; } = 5;
-
-        public void Draw()
+        private int _OldX;
+        private float _xReal;
+        public int GapSize { get; set; } = 4;
+        public bool Passed { get; set; } = false;
+        public Pipe(int x) : base(x, 0)
         {
-            int height = Console.WindowHeight;
-            int maxX = Math.Max(0, Console.WindowWidth - 2);
+            Random rnd = new Random();
+            _xReal = x;
+            Y = rnd.Next(2, Console.WindowHeight - GapSize - 2);
+            _OldX = x;
+            this.Width = 2;
+            this.Height = GapSize;
+        }
 
-            if (X < 0 || X > maxX)
-                return;
+        public override void Update(float dt)
+        {
+            _OldX = X;
+            _xReal -= (GameManager.gameSpeed * dt);
+            X = (int)_xReal;
+            if (X < 0) IsActive = false;
+        }
 
+        public override void Draw()
+        {
+            //chỉ vẽ nếu ống nằm trong vùng màn hình
+            if (X < 0 || X >= Console.WindowWidth) return;
 
-            for (int y = 0; y < GapY; y++)
+            Console.ForegroundColor = ConsoleColor.Green;
+            for (int i = 0; i < Y; i++)
             {
-                Console.SetCursorPosition(X, y);
+                Console.SetCursorPosition(X, i);
                 Console.Write("||");
             }
-
-  
-            for (int y = GapY + GapSize; y < height; y++)
+            for (int i = Y + GapSize; i < Console.WindowHeight; i++)
             {
-                Console.SetCursorPosition(X, y);
+                Console.SetCursorPosition(X, i);
                 Console.Write("||");
             }
+            Console.ResetColor();
         }
-        public void Move()
+        public override void Clear()
         {
-            X--;
-        }
-        public Pipe(int x, int gapY)
-        {
-            X = x;
-            GapY = gapY;
-        }
-        public bool IsCollidingWith(int birdX, int birdY)
-        {
-       
-            bool sameColumn = (birdX == this.X) || (birdX == this.X + 1);
-            if (sameColumn)
+            if (_OldX < 0 || _OldX >= Console.WindowWidth) return;
+            //xóa sạch cột tại vị trí cũ bằng cách quét toàn bộ chiều cao màn hình
+            for (int i = 0; i < Console.WindowHeight; i++)
             {
-    
-                if (birdY < GapY || birdY >= GapY + GapSize)
-                    return true;
+                Console.SetCursorPosition(_OldX, i);
+                Console.Write("  ");
             }
-            return false;
         }
+
+        public MyRectangle GetBounds()
+        {
+            //khe gap an toàn
+            return new MyRectangle(X, Y, Width, Height);
+        }
+        
     }
 }
-   

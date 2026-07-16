@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("game flappy bird")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ff60b5c3e8857594a3bde9546d23b9818abaa5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91aefba82d4315e2f8b8b1b10c7d6dff793ef6da")]
 [assembly: System.Reflection.AssemblyProductAttribute("game flappy bird")]
 [assembly: System.Reflection.AssemblyTitleAttribute("game flappy bird")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

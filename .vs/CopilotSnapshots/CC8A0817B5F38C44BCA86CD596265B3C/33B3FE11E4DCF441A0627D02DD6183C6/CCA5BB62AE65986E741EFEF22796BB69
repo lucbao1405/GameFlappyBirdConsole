@@ -1,0 +1,21 @@
+﻿
+
+using System.Drawing;
+namespace Interface
+{
+    public interface IDrawable
+    {
+        void Draw();
+        void Clear();
+    }
+
+    public interface IUpdatable
+    {
+        void Update(float dt);
+    }
+
+    public interface ICollidable
+    {
+        System.Drawing.Rectangle GetBounds();
+    }
+}

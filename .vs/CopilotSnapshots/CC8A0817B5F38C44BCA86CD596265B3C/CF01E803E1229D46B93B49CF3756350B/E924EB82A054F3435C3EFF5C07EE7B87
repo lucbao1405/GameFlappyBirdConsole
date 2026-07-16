@@ -1,0 +1,27 @@
+﻿/*
+ TODO (GameManager.cs): implement the main game loop and high-level game state
+
+ Responsibilities:
+ - Own instances: Bird bird; List<Pipe> pipes; int score; bool gameOver.
+ - Initialize game state and seed initial pipes.
+ - Run() or Start() loop:
+     - Use a fixed timestep or Stopwatch to compute dt each frame.
+     - Read input (Console.KeyAvailable / ReadKey(true)) to trigger bird.Jump() or quit.
+     - Call Update(dt) to update all entities and game state.
+     - Call Draw() to render the current frame (pipes, bird, score, game over screen).
+     - Sleep to cap frame rate (e.g., Thread.Sleep(16) for ~60 FPS) or use timing loop.
+ - Update(dt): move pipes left, spawn new pipes when spawn timer reaches spawnInterval,
+     remove off-screen pipes, detect collisions and increment score when bird passes a pipe.
+ - Draw(): either Console.Clear() then draw everything or maintain a char buffer and only rewrite changed chars
+     to reduce flicker. Always guard SetCursorPosition with bounds checks.
+
+ Tips:
+ - Keep rendering simple first (Console.Clear + draw) then optimize if flicker is bad.
+ - Expose Restart() to reset state after Game Over.
+*/
+namespace game_flappy_bird
+{
+    internal class Entity
+    {
+    }
+}
