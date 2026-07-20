@@ -13,6 +13,6 @@ GameManager.cs:Điều khiển vòng lặp game và trạng thái màn hình.
 
 Program.cs: Điểm bắt đầu (Entry point) của ứng dụng.
 
-Interface.cs Lưu cái interface
+Interface.cs Lưu các interface
 
 Clone dự án và dùng Visual Studio để sử dụng
