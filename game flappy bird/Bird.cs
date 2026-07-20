@@ -22,8 +22,6 @@
             _yReal += _velocity * dt;
             Y = (int)Math.Round(_yReal);
 
-            if (Y >= Console.WindowHeight) { Y = Console.WindowHeight - 1; IsActive = false; }
-
             if (Y >= Console.WindowHeight - 1)
             {
                 Y = Console.WindowHeight - 1;
@@ -45,7 +43,7 @@
         public override void Clear()
         {
             for (int y = _OldY - 1; y <= _OldY + 1; y++)
-            {
+             {
                 if (y >= 0 && y < Console.WindowHeight)
                 {
                     Console.SetCursorPosition(X, y);

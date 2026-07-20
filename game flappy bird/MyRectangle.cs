@@ -14,7 +14,7 @@ namespace game_flappy_bird
             X = x; Y = y; Width = width; Height = height;
         }
 
-        //kiểm tra va chạm hình chữ nhật
+        //kiểm tra va chạm bằng hình chữ nhật
         public bool IsSafe(MyRectangle pipeTop, MyRectangle pipeBottom)
         {
             //nếu chim chạm vào ống trên hoặc ống dưới thì là va chạm

@@ -40,6 +40,7 @@ namespace game_flappy_bird
                 {
                     pipe.Update(dt);
                     if (CheckCollision(_bird, pipe)) _isRunning = false;
+                    //tính điểm
                     if (!pipe.Passed && pipe.X < _bird.X)
                     {
                         _score++;
@@ -86,7 +87,6 @@ namespace game_flappy_bird
                             _bird = new Bird(5, 10);
                             _isRunning = true;
                             Console.Clear();
-                            //cập nhật lại thời gian
                             lastTime = Environment.TickCount;
                             break;
                         }
@@ -103,12 +103,9 @@ namespace game_flappy_bird
         {
             //lấy bounding box của chim (trả về MyRectangle)
             MyRectangle bRect = bird.GetBounds();
-
             //tạo 2 vùng va chạm cho ống (phần ống trên và phần ống dưới)
             MyRectangle topPipe = new MyRectangle(pipe.X, 0, 2, pipe.Y);
             MyRectangle botPipe = new MyRectangle(pipe.X, pipe.Y + pipe.GapSize, 2, Console.WindowHeight - (pipe.Y + pipe.GapSize));
-
-            //nếu không an toàn thì là va chạm -> trả về true
             return !bRect.IsSafe(topPipe, botPipe);
         }
     }
